@@ -1,0 +1,12 @@
+{
+  "authTime": 23672682764,
+  "expTime": 1527036490,
+  "sessionAuthlevel": ${account.authLevel},
+  "userReglevel": ${account.regLevel},
+  "userOwnedSCN": ${account.scn},
+  "basn": ${account.scn},
+  "givenName": "${account.firstName}",
+  "familyName": "${account.lastName}",
+  "locale": "${account.language.internalCode}",
+  "userSalutation": "${account.salutation}"
+}

@@ -1,0 +1,92 @@
+{
+  "/oce/gp": {
+    "target": "http://localhost:9999",
+    "targetDev1": "https://care-mocks.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/gp": "/care-mock/oce/gp"
+    }
+  },
+  "/oce/fda": {
+    "target": "http://localhost:9999",
+    "targetDev1": "https://care-mocks.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/fda": "/care-mock/oce/fda"
+    }
+  },
+  "/oce/soe/v1/bills": {
+    "target": "http://localhost:9999",
+    "targetDev1": "https://care-mocks.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/soe/v1/bills": "/care-mock/oce/soe/v1/bills"
+    }
+  },
+  "/internet/online/app/rest/customers/s_id/users": {
+    "target": "http://localhost:9999",
+    "targetDev1": "https://care-mocks.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/internet/online/app/rest/customers/s_id/users": "/care-mock/internet/online/app/rest/customers/s_id/users"
+    }
+  },
+  "/oce/soe/v1/combox-management": {
+    "target": "http://localhost:9000",
+    "targetDev1": "https://care-mocks.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/soe/v1/combox-management": "/oce/soe/v1/combox-management"
+    }
+  },
+  "/oce/soe/v1/notification/orders": {
+    "target": "http://localhost:9002",
+    "targetDev1": "https://dev1-oce-soe-orderNotifications.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/soe/v1/notification/orders": "/oce/soe/v1/notifications/orders"
+    }
+  },
+  "/oce/soe/v1/quick-actions": {
+    "target": "http://localhost:9003",
+    "targetDev1": "https://dev1-oce-soe-quickactions.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/soe/v1/quick-actions": "/oce/soe/v1/quick-actions"
+    }
+  },
+  "/oce/soe/v1/userinteractions": {
+    "target": "http://localhost:9004",
+    "targetDev1": "https://dev-oce-soe-userInteractions.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/soe/v1/userinteractions": "/oce/soe/v1/userInteractions"
+    }
+  },
+  "/oce/soe/v1/priceAndBenefitManagement": {
+    "target": "http://localhost:9005",
+    "targetDev1": "https://dev-oce-soe-priceAndBenefit.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/soe/v1/priceAndBenefitManagement": "/oce/soe/v1/priceAndBenefitManagement"
+    }
+  },
+ "/oce/soe/v1/serviceconfiguration": {
+    "target": "http://localhost:9006",
+    "targetDev1": "https://care-mocks.scapp-corp.swisscom.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/oce/soe/v1/serviceconfiguration": "/oce/soe/v1/serviceconfiguration"
+    }
+  }
+}

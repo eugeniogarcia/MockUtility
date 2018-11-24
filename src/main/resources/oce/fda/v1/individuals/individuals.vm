@@ -1,0 +1,59 @@
+[{
+  "id": "individual-${account.scn}",
+  "href": "/oce/fda/v1/individuals/${account.scn}",
+  "scn": "${account.scn}",
+  "externalId": "SIECON5-QBWK-92",
+  "gender": "Male",
+  "preferredLanguage": "${account.language.siebelCode}",
+  "nationality": "${account.nationality}",
+  "birthDate": "1959-06-24",
+  "title": "Mr.",
+  "givenName": "${account.firstName}",
+  "familyName": "${account.lastName}",
+  "fullName": "${account.firstName} ${account.lastName}",
+  "status": "Active",
+  "salutation": "Dear ${salutation}",
+  "contactMediums": [{
+    "id": "453726487650604",
+    "type": "Owner address",
+    "preferred": false,
+    "address": {
+      "id": "8728297",
+      "integrationId": "1032906311",
+      "type": "Owner address",
+      "country": "${account.address.country}",
+      "city": "${account.address.city}",
+      "houseNumber": "${account.address.houseNumber}",
+      "street": "${account.address.street}",
+      "postCode": "${account.address.postalCode}"
+    }
+  }
+    #if(!$StringUtils.isEmpty(${account.contactMedium.phoneNumberMobile}))
+  ,{
+    "id": "453726487650601",
+    "type": "Mobile",
+    "preferred": false,
+    "medium": {
+      "number": "${account.contactMedium.phoneNumberMobile}"
+    }
+  }
+    #end
+    #if(!$StringUtils.isEmpty(${account.contactMedium.email}))
+  ,
+  {
+    "id": "453726487650598",
+    "type": "Email",
+    "status": "Provisional",
+    "preferred": false,
+    "medium": {
+      "emailAddress": "${account.contactMedium.email}"
+    }
+  }
+    #end
+  ],
+  "relatedParties": [{
+    "id": "${account.scn}",
+    "role": "Customer",
+    "name": "${account.firstName} ${account.lastName}"
+  }]
+}]

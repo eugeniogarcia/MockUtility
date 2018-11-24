@@ -1,0 +1,31 @@
+{
+  "permissions": [{
+    "action": "View.Customer",
+    "object": {
+      "id": "${account.scn}",
+      "type": "CMAType"
+    },
+    "decision": "permit"
+  }, {
+    "action": "View.BillingProfile",
+    "object": {
+      "id": "${account.scn}",
+      "type": "CMAType"
+    },
+    "decision": "permit"
+  }, {
+    "action": "View.Activity",
+    "object": {
+      "id": "${account.scn}",
+      "type": "CMAType"
+    },
+    "decision": "permit"
+  }, {
+    "action": "View.Asset",
+    "object": {
+      "id": "${account.scn}",
+      "type": "CMAType"
+    },
+    "decision": "permit"
+  }]
+}
