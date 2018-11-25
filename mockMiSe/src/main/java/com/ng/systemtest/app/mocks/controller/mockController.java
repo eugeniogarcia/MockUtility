@@ -52,7 +52,7 @@ public class mockController {
         )
         .build();
 
-		final String cuerpo=Templates.process("oce/fda/v1/individuals/individuals.vm", new AccountMockContext(cuenta).getVelocityContext());
+		final String cuerpo=Templates.process("individuals/individuals.vm", new AccountMockContext(cuenta).getVelocityContext());
 		//Reply is ready
 		final ResponseEntity<String> respuesta=new ResponseEntity<String>(cuerpo,HttpStatus.OK);
 		LOGGER.info("Replying to requesto to /individuals?scn={}",scn);

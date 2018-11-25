@@ -21,7 +21,7 @@ public class Individuals {
         stubFor(get(urlMatching(mockContext.getBaseUrl() + "/individuals.*")).withQueryParam("scn", equalTo(mockContext.getAccount().getScn()))
                 .willReturn(aResponse()
                         .withHeader("Content-type", "application/json")
-                        .withBody(Templates.process("oce/fda/v1/individuals/individuals.vm", mockContext.getVelocityContext()))));
+                        .withBody(Templates.process("individuals/individuals.vm", mockContext.getVelocityContext()))));
     }
 
 }

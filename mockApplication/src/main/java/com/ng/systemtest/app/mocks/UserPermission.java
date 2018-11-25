@@ -17,10 +17,10 @@ public class UserPermission {
     }
 
     public void build() {
-        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/oce/gp/v1/user/permissions"))
+        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/user/permissions"))
                 .willReturn(aResponse()
                         .withHeader("Content-type", "application/json")
-                        .withBody(Templates.process("oce/gp/v1/user/permissions/permissions.vm", mockContext.getVelocityContext()))));
+                        .withBody(Templates.process("permissions/permissions.vm", mockContext.getVelocityContext()))));
     }
 
 }

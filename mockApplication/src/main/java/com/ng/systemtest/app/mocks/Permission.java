@@ -17,7 +17,7 @@ public class Permission {
     }
 
     public void build() {
-        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/oce/gp/v1/permissions.*"))
+        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/permissions.*"))
                 .willReturn(aResponse()
                         .withHeader("Content-type", "application/json")
                         .withBody("{ permit: true }")));

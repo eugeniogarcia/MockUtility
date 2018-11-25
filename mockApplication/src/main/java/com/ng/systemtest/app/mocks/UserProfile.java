@@ -19,10 +19,10 @@ public class UserProfile {
     }
 
     public void build() {
-        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/oce/gp/v1/user/profile")).withHeader(MOCKED_SCN_HEADER_KEY, containing(mockContext.getAccount().getScn()))
+        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/user/profile")).withHeader(MOCKED_SCN_HEADER_KEY, containing(mockContext.getAccount().getScn()))
                 .willReturn(aResponse()
                         .withHeader("Content-type", "application/json")
-                        .withBody(Templates.process("oce/gp/v1/user/profile/profile.vm", mockContext.getVelocityContext()))));
+                        .withBody(Templates.process("user/profile/profile.vm", mockContext.getVelocityContext()))));
     }
 
 }

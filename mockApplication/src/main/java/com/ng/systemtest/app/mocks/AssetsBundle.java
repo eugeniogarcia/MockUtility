@@ -19,10 +19,10 @@ public class AssetsBundle {
     }
 
     public void build() {
-        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/oce/fda/v1/assetsBundle.*")).withQueryParam("scn", equalTo(mockContext.getAccount().getScn()))
+        stubFor(get(urlMatching(mockContext.getBaseUrl() + "/assetsBundle.*")).withQueryParam("scn", equalTo(mockContext.getAccount().getScn()))
                 .willReturn(aResponse()
                         .withHeader("Content-type", "application/json")
-                        .withBody(Templates.process("oce/fda/v1/assetsBundle/assetsBundle.vm", mockContext.getVelocityContext()))));
+                        .withBody(Templates.process("assetsBundle/assetsBundle.vm", mockContext.getVelocityContext()))));
     }
 
 }

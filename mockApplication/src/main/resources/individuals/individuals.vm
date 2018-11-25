@@ -1,6 +1,6 @@
 [{
   "id": "individual-${account.scn}",
-  "href": "/oce/fda/v1/individuals/${account.scn}",
+  "href": "/individuals/${account.scn}",
   "scn": "${account.scn}",
   "externalId": "SIECON5-QBWK-92",
   "gender": "Male",

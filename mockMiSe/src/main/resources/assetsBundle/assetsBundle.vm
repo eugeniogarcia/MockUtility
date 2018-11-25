@@ -28,7 +28,7 @@
         "endDate": "2019-08-23"
       }
     ],
-    "href": "/oce/fda/v1/assetsBundle/257865398761804"
+    "href": "/assetsBundle/257865398761804"
   },
   {
     "id": "6754489856",
@@ -119,6 +119,6 @@
         "locationSupplement": "Lully GE"
       }
     ],
-    "href": "/oce/fda/v1/assetsBundle/6754489856"
+    "href": "/assetsBundle/6754489856"
   }
 ]

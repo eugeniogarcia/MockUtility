@@ -20,13 +20,13 @@ public class CallforwardingPreferences {
 
 	public void build() {
 		stubFor(get(
-				urlMatching(mockContext.getBaseUrl() + "/oce/gp/v1/user-preferences/callforwarding.*"))
+				urlMatching(mockContext.getBaseUrl() + "/user-preferences/callforwarding.*"))
 						.willReturn(aResponse()
 								.withHeader("Content-type", "application/json")
 								.withBody(Templates.process("userpref/callforwarding/get-callforwarding-pref.vm", mockContext.getVelocityContext()))
                                 .withTransformers("response-template")));
 
-		stubFor(put(urlMatching(mockContext.getBaseUrl() + "/oce/gp/v2/user-preferences/callforwarding"))
+		stubFor(put(urlMatching(mockContext.getBaseUrl() + "/user-preferences/callforwarding"))
 						.willReturn(aResponse()
 								.withHeader("Content-type", "application/json")
 								.withBody(Templates.process("userpref/callforwarding/put-callforwarding-pref.vm", mockContext.getVelocityContext()))
