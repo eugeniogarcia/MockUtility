@@ -1,0 +1,12 @@
+.idea/
+target/
+dependency-reduced-pom.xml
+workspace/
+*.iml
+
+src/main/proxy/node_modules
+
+.project
+.settings
+.classpath
+bin/

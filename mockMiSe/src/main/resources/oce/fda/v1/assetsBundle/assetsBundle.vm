@@ -1,0 +1,124 @@
+[
+  {
+    "id": "257865398761804",
+    "scn": "${account.scn}",
+    "integrationId": "ALL:SUB:123",
+    "uiCategory": "Mobile Voice",
+    "productId": "5-1KDEC",
+    "billingIntId": "ALL:BAC:227976",
+    "serviceType": "Bundle",
+    "status": "Active",
+    "name": "M-Budget Mobile Surf",
+    "startDate": "2017-08-23",
+    "endDate": "2019-08-23",
+    "assets": [
+      {
+        "id": "257865398761807",
+        "scn": "${account.scn}",
+        "integrationId": "ALL:SUB:1234",
+        "parentId": "257865398761804",
+        "uiCategory": "Mobile-N",
+        "productId": "5-2EDEC",
+        "billingIntId": "ALL:BAC:227976",
+        "serviceType": "Mobile-N",
+        "status": "Active",
+        "name": "Mobile",
+        "assetNumber": "+41794937117",
+        "startDate": "2017-08-23",
+        "endDate": "2019-08-23"
+      }
+    ],
+    "href": "/oce/fda/v1/assetsBundle/257865398761804"
+  },
+  {
+    "id": "6754489856",
+    "scn": "${account.scn}",
+    "integrationId": "ALL:SUB:20000001523638",
+    "uiCategory": "Bundle",
+    "productId": "5-1XDEC",
+    "billingIntId": "ALL:BAC:227976",
+    "serviceType": "Bundle",
+    "status": "Active",
+    "name": "InOne Home",
+    "startDate": "2017-08-23",
+    "endDate": "2019-08-23",
+    "assets": [
+      {
+        "id": "6754329757",
+        "scn": "${account.scn}",
+        "integrationId": "ALL:SUB:20000001523639",
+        "parentId": "6754489856",
+        "uiCategory": "VoIP-N",
+        "productId": "5-19DEC",
+        "billingIntId": "ALL:BAC:227976",
+        "serviceType": "VoIP-N",
+        "status": "Active",
+        "name": "Fixed network",
+        "startDate": "2017-08-23",
+        "endDate": "2019-08-23",
+        "characteristics": [
+          {
+            "id": "6543528799",
+            "name": "Number",
+            "value": "+41798839455"
+          },
+          {
+            "id": "6543528797",
+            "name": "Number",
+            "value": "+41798839455"
+          },
+          {
+            "id": "6543528796",
+            "name": "Number",
+            "value": "+41798839455"
+          }
+        ]
+      },
+      {
+        "id": "6754489851",
+        "scn": "${account.scn}",
+        "integrationId": "ALL:SUB:20000001523640",
+        "parentId": "6754489856",
+        "uiCategory": "Internet-N",
+        "productId": "5-1YDEC",
+        "billingIntId": "ALL:BAC:227976",
+        "serviceType": "Internet-N",
+        "status": "Active",
+        "name": "Internet",
+        "startDate": "2017-08-23",
+        "endDate": "2019-08-23",
+        "characteristics": [
+          {
+            "id": "6543528765",
+            "name": "Flavour",
+            "value": "Internet M"
+          },
+          {
+            "id": "6543528745",
+            "name": "Download Speed",
+            "value": "50"
+          }
+        ]
+      }
+    ],
+    "place": [
+      {
+        "id": "12345",
+        "addressId": "567834",
+        "gaiaId": "40045881",
+        "integrationId": "40045881",
+        "addressType": "Geopraphical Address",
+        "language": "DEU",
+        "city": "${account.address.city}",
+        "country": "${account.address.country}",
+        "postCode": "${account.address.postalCode}",
+        "postCodeExt": "00",
+        "street": "${account.address.street}",
+        "houseNumber": "${account.address.houseNumber}",
+        "residenceDescription": "Alte Mühle",
+        "locationSupplement": "Lully GE"
+      }
+    ],
+    "href": "/oce/fda/v1/assetsBundle/6754489856"
+  }
+]
