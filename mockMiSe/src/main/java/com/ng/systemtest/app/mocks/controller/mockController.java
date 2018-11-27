@@ -1,6 +1,9 @@
 package com.ng.systemtest.app.mocks.controller;
 
+import static com.ng.systemtest.Templates.fromResource;
+
 import java.util.Date;
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +31,21 @@ public class mockController {
 		LOGGER.info("Processing a requesto to /individuals?scn={}",scn);
 		LOGGER.info("Preparing the mocking data");
 
+		String pais="";
+		if(scn.compareTo("A")==0) {
+			pais="Italiana";
+			}
+		else {
+			pais="god only knows";
+		}
+		String phone="",email="";
+		if(Math.random()<0.5) {
+			phone="+41799066680";
+		}
+		if(Math.random()<0.5) {
+			email="marco.pagamici@swisscom.com";
+		}        
+        
 		final Account cuenta=Account.AccountBuilder.anAccount()
         .withScn(scn)
         .withGender(Gender.FEMALE)
@@ -35,6 +53,7 @@ public class mockController {
         .withFirstName("Suanne")
         .withLastName("Viox")
         .withBirthDate(new Date(-332106348))
+        .withNationality(pais)
         .withAddress(
                 Address.AddressBuilder.anAddress()
                         .withStreet("Bahnhofstrasse")
@@ -46,13 +65,24 @@ public class mockController {
         )
         .withContactMedium(
                 ContactMedium.ContactMediumBuilder.aContactMedium()
-                        .withPhoneNumberMobile("+41799066680")
-                        .withEmail("marco.pagamici@swisscom.com")
+                        .withPhoneNumberMobile(phone)
+                        .withEmail(email)
                         .build()
         )
         .build();
 
-		final String cuerpo=Templates.process("individuals/individuals.vm", new AccountMockContext(cuenta).getVelocityContext());
+		String cuerpo;
+		switch(scn) {
+			case "A":
+				cuerpo=Templates.process("individuals/individuals_ms.vm", new AccountMockContext(cuenta).getVelocityContext());
+				break;
+			case "B":
+				cuerpo=fromResource("sockjs-node/sockjs-node.json");
+				break;
+			default:
+				cuerpo=Templates.process("individuals/individuals.vm", new AccountMockContext(cuenta).getVelocityContext());
+		}
+		
 		//Reply is ready
 		final ResponseEntity<String> respuesta=new ResponseEntity<String>(cuerpo,HttpStatus.OK);
 		LOGGER.info("Replying to requesto to /individuals?scn={}",scn);

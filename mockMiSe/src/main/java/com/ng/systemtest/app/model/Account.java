@@ -15,6 +15,7 @@ public class Account {
     private ContactMedium contactMedium;
     private int regLevel = 0;
     private int authLevel = 0;
+    private String nationality;
 
     private Account(final String scn, final String salutation, final String firstName, final String lastName) {
         this.scn = scn;
@@ -29,6 +30,10 @@ public class Account {
 
     public String getSalutation() {
         return salutation;
+    }
+
+    public String getNationality() {
+        return nationality;
     }
 
     public String getFirstName() {
@@ -71,6 +76,7 @@ public class Account {
         private ContactMedium contactMedium;
         private int regLevel = 0;
         private int authLevel = 0;
+        private String nationality;
 
         private AccountBuilder() {
         }
@@ -133,7 +139,12 @@ public class Account {
             this.authLevel = authLevel;
             return this;
         }
-
+        
+        public AccountBuilder withNationality(String nationality) {
+            this.nationality = nationality;
+            return this;
+        }
+        
         public Account build() {
             Account account = new Account(scn, salutation, firstName, lastName);
             account.address = this.address;
@@ -143,6 +154,7 @@ public class Account {
             account.regLevel = this.regLevel;
             account.gender = this.gender;
             account.authLevel = this.authLevel;
+            account.nationality=this.nationality;
             return account;
         }
     }

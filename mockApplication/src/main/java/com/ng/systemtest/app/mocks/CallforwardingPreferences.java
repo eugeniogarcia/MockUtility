@@ -24,7 +24,10 @@ public class CallforwardingPreferences {
 						.willReturn(aResponse()
 								.withHeader("Content-type", "application/json")
 								.withBody(Templates.process("userpref/callforwarding/get-callforwarding-pref.vm", mockContext.getVelocityContext()))
-                                .withTransformers("response-template")));
+                                //En este caso especificamos ademas que queremos transformar la salida. Esto nos permite
+								//aplicar logica en el body, que en tiempo de ejecución se ejecutara, tomando por ejemplo
+								//valores del imput, reemplazando campos por valores del input, ... (ver doc adjunto
+								.withTransformers("response-template")));
 
 		stubFor(put(urlMatching(mockContext.getBaseUrl() + "/user-preferences/callforwarding"))
 						.willReturn(aResponse()

@@ -20,7 +20,7 @@ public class UserPermission {
         stubFor(get(urlMatching(mockContext.getBaseUrl() + "/user/permissions"))
                 .willReturn(aResponse()
                         .withHeader("Content-type", "application/json")
-                        .withBody(Templates.process("permissions/permissions.vm", mockContext.getVelocityContext()))));
+                        .withBody(Templates.process("user/permissions/permissions.vm", mockContext.getVelocityContext()))));
     }
 
 }

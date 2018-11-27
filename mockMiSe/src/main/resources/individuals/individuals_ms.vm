@@ -1,0 +1,18 @@
+[{
+  "id": "individual-${account.scn}",
+  "scn": "${account.scn}",
+  "gender": "Italian Male",
+  "preferredLanguage": "${account.language.siebelCode}",
+  "nationality": "${account.nationality}",
+  "givenName": "${account.firstName}",
+  "familyName": "${account.lastName}",
+  "fullName": "${account.firstName} ${account.lastName}",
+  "status": "Active",
+  "salutation": "Dear ${salutation}",
+  "contactMediums": [],
+  "relatedParties": [{
+    "id": "${account.scn}",
+    "role": "Customer",
+    "name": "${account.firstName} ${account.lastName}"
+  }]
+}]

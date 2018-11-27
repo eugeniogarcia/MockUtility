@@ -27,6 +27,7 @@ public class MockServer {
                         //Habilta la posibilidad de crear una respuesta personalizada
                         //usando templates, pero no la habilita por defecto (false) para
                         //todos los mocks, asi que habra que habilitarlo caso por caso
+                        //Ver los mocks de callforwarding. En estos se aplica una transformación
                         .extensions(new ResponseTemplateTransformer(false)));
 
         //Arranca el demonio que parara el mock server cuando la aplicación termine
